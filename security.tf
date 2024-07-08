@@ -13,6 +13,27 @@ resource "aws_security_group" "web-sg" {
       cidr_blocks = ["0.0.0.0/0"]
     
   }
+
+    ingress {
+      description = "ingress port "
+      #from_port   = ingress.value
+      from_port   = 5000
+      to_port     = 5000
+      protocol    = "tcp"
+      cidr_blocks = ["0.0.0.0/0"]
+    
+  }
+
+   ingress {
+      description = "ingress port "
+      #from_port   = ingress.value
+      from_port   = 3000
+      to_port     = 3000
+      protocol    = "tcp"
+      cidr_blocks = ["0.0.0.0/0"]
+    
+  }
+
   ingress {
       description = "ingress port "
       #from_port   = ingress.value
